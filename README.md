@@ -100,6 +100,16 @@ curl -s -X POST https://liors.co.il/api/search \
 
 Request fields: `q` (free-text address), optional `perPage` and `numTypos`.
 
+## Open dataset
+
+The address→zip data behind this project is published here as an open, developer-friendly
+**CSV** — `city, street, house_number, zip5, zip7` for **515,311** addresses
+(91 cities, ~24,000 streets). See **[DATASET.md](DATASET.md)** for the schema, source/attribution,
+and a one-command loader into Typesense.
+
+- Full: [`data/israel-postal-codes.csv`](data/israel-postal-codes.csv) (~26 MB)
+- Preview: [`data/sample.csv`](data/sample.csv)
+
 ## Stack
 
 - **Search:** Typesense (single in-memory collection, rebuilt from the source address file)
